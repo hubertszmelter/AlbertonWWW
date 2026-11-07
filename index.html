@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alberton — anonimizacja umów przed wklejeniem do AI</title>
+<meta name="description" content="Alberton zamienia nazwiska, numery PESEL, adresy i numery rachunków na znaczniki, zanim tekst opuści Twój komputer. Działa offline, dla dokumentów po polsku i angielsku.">
+<meta name="theme-color" content="#0F4C81">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:site_name" content="Alberton">
+<meta property="og:title" content="Alberton — wklejaj umowy do AI bez danych klientów">
+<meta property="og:description" content="Anonimizacja dokumentów na Twoim komputerze, offline. Dla kancelarii, które chcą pracować z AI.">
+<meta property="og:image" content="assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Alberton — wklejaj umowy do AI bez danych klientów">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="preload" href="assets/fonts/manrope-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/styles.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Alberton",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Windows, macOS",
+  "description": "Aplikacja desktopowa do anonimizacji umów i dokumentów przed wklejeniem ich do narzędzi AI. Działa offline.",
+  "inLanguage": ["pl", "en"]
+}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#tresc">Przejdź do treści</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="./" aria-label="Alberton — strona główna">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true"><path d="M8 4H4V24H8" stroke="#0F4C81" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M20 4H24V24H20" stroke="#0F4C81" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><rect x="9" y="12" width="10" height="4" rx="1" fill="#38B2AC"/></svg>
+      <span>Alberton</span>
+    </a>
+    <nav class="main-nav" aria-label="Główna nawigacja">
+      <a class="nav-link" href="#jak-dziala">Jak działa</a>
+      <a class="nav-link" href="#bezpieczenstwo">Bezpieczeństwo</a>
+      <a class="nav-link" href="#kancelarie">Dla kancelarii</a>
+      <a class="nav-link" href="#">Cennik</a>
+      <a class="btn btn-secondary" href="#">Pobierz wersję próbną</a>
+    </nav>
+  </div>
+</header>
+
+<main id="tresc">
+
+  <section class="wrap hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <h1 id="hero-title">Wklejaj umowy do AI bez danych klientów</h1>
+      <p class="lead">Alberton zamienia nazwiska, numery PESEL, adresy i numery rachunków na znaczniki, zanim tekst opuści Twój komputer. Działa offline, z dokumentami po polsku i angielsku.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#">Pobierz wersję próbną</a>
+        <a class="text-link" href="#jak-dziala">Zobacz, jak to działa</a>
+      </div>
+    </div>
+
+    <div class="hero-demo">
+      <div class="doc">
+        <div class="doc-bar">
+          <span class="doc-name">umowa-najmu.docx</span>
+          <div class="toggle" role="group" aria-label="Widok dokumentu">
+            <button type="button" data-view="orig" aria-pressed="false">Oryginał</button>
+            <button type="button" data-view="anon" aria-pressed="true">Po anonimizacji</button>
+          </div>
+        </div>
+        <div class="doc-body" aria-live="polite">
+          <p class="doc-title">Umowa najmu lokalu mieszkalnego</p>
+          <div data-panel="orig" hidden>
+            <p>zawarta 12 marca 2026 r. w Warszawie pomiędzy Janem Kowalskim, PESEL 44051401359, zam. ul. Lipowa 7/12, 00-001 Warszawa, zwanym dalej Wynajmującym,</p>
+            <p>a Anną Nowak, PESEL 02070803628, zam. ul. Słoneczna 3, 31-002 Kraków, zwaną dalej Najemcą.</p>
+            <p>§ 3. Czynsz w wysokości 3 200 zł Najemca wpłaca do 10. dnia miesiąca na rachunek nr PL61 1090 1014 0000 0712 1981 2874.</p>
+          </div>
+          <div data-panel="anon">
+            <p>zawarta 12 marca 2026 r. w Warszawie pomiędzy <span class="tag">[OSOBA_1]</span>, PESEL <span class="tag">[PESEL_1]</span>, zam. <span class="tag">[ADRES_1]</span>, zwanym dalej Wynajmującym,</p>
+            <p>a <span class="tag">[OSOBA_2]</span>, PESEL <span class="tag">[PESEL_2]</span>, zam. <span class="tag">[ADRES_2]</span>, zwaną dalej Najemcą.</p>
+            <p>§ 3. Czynsz w wysokości 3 200 zł Najemca wpłaca do 10. dnia miesiąca na rachunek nr <span class="tag">[RACHUNEK_1]</span>.</p>
+          </div>
+        </div>
+      </div>
+      <p class="caption">Przykładowy fragment umowy. Dane w przykładzie są fikcyjne.</p>
+    </div>
+  </section>
+
+  <section id="jak-dziala" class="band" aria-labelledby="how-title">
+    <div class="wrap how">
+      <div class="how-intro">
+        <h2 id="how-title" class="h2">Jak to działa</h2>
+        <p>Alberton nie łączy się z żadnym czatem AI. Przygotowuje tekst, a Ty decydujesz, gdzie go wkleić.</p>
+      </div>
+      <ol class="how-steps">
+        <li>
+          <h3>Otwierasz dokument</h3>
+          <p>Wklejasz tekst albo otwierasz plik umowy, pisma lub notatki. Alberton obsługuje dokumenty po polsku i angielsku.</p>
+        </li>
+        <li>
+          <h3>Sprawdzasz, co zostało zakryte</h3>
+          <p>Dane osobowe i identyfikatory zmieniają się w znaczniki, takie jak [OSOBA_1] czy [PESEL_1]. Jeśli chcesz zakryć coś jeszcze, zaznaczasz to ręcznie.</p>
+        </li>
+        <li>
+          <h3>Kopiujesz tekst do AI</h3>
+          <p>Wklejasz zanonimizowany tekst do narzędzia, z którego korzysta Twoja kancelaria. Analiza umowy działa tak samo, tylko bez danych klientów.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="wrap section split" aria-labelledby="rule-title">
+    <div class="rule-copy">
+      <h2 id="rule-title" class="h2">Lepiej zakryć za dużo niż za mało</h2>
+      <p class="measure">Kiedy Alberton nie jest pewien, czy fragment to dana osobowa, zakrywa go i oznacza do sprawdzenia. Odznaczenie zbędnego znacznika zajmuje chwilę. Przeoczony numer PESEL w czacie AI to już problem.</p>
+      <p class="measure">Masz też ręczne narzędzie do zaznaczania: nazwę spółki, sygnaturę akt czy szczegół sprawy zakryjesz sam, zanim skopiujesz tekst.</p>
+    </div>
+    <div class="panel">
+      <p class="panel-title">Wykryte w dokumencie</p>
+      <ul class="found">
+        <li><span>Jan Kowalski <span class="kind">· osoba</span></span><span class="status status-done">Zakryte</span></li>
+        <li><span>44051401359 <span class="kind">· PESEL</span></span><span class="status status-done">Zakryte</span></li>
+        <li><span>ul. Lipowa 7/12 <span class="kind">· adres</span></span><span class="status status-done">Zakryte</span></li>
+        <li><span>Wynajmujący <span class="kind">· możliwa osoba</span></span><span class="status status-check">Do sprawdzenia</span></li>
+      </ul>
+      <button type="button" class="btn btn-secondary">Zaznacz fragment ręcznie</button>
+    </div>
+  </section>
+
+  <section id="bezpieczenstwo" class="security" aria-labelledby="sec-title">
+    <div class="wrap section">
+      <div class="security-copy">
+        <h2 id="sec-title">Dokumenty nie opuszczają Twojego komputera</h2>
+        <p>Anonimizacja odbywa się w całości na Twoim urządzeniu. Alberton nie potrzebuje internetu, żeby działać, i nie przesyła plików na żadne serwery.</p>
+      </div>
+      <ul class="facts">
+        <li>Działa w pełni offline</li>
+        <li>Bez konta w chmurze i bez wysyłania dokumentów</li>
+        <li>Tekst do AI wklejasz sam, więc zawsze widzisz, co wysyłasz</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="kancelarie" class="wrap section law" aria-labelledby="law-title">
+    <h2 id="law-title" class="h2">Dla kancelarii, które chcą pracować z AI, a nie mogą wysyłać danych klientów</h2>
+    <div class="law-cols">
+      <p>Wewnętrzna polityka zabrania wklejania danych klientów do zewnętrznych narzędzi? Alberton pozwala korzystać z AI przy przeglądzie umów, pism i korespondencji z zachowaniem tej zasady.</p>
+      <p>Nie wymaga wiedzy technicznej ani własnych serwerów. Instalujesz program na komputerze i od razu pracujesz na swoich dokumentach.</p>
+    </div>
+  </section>
+
+  <section class="wrap section faq" aria-labelledby="faq-title">
+    <h2 id="faq-title" class="h2">Częste pytania</h2>
+    <div class="faq-list">
+      <details>
+        <summary>Czy Alberton wysyła moje dokumenty do internetu?</summary>
+        <p>Nie. Program działa offline, a dokument przetwarzany jest wyłącznie na Twoim komputerze.</p>
+      </details>
+      <details>
+        <summary>Jakie dane Alberton rozpoznaje?</summary>
+        <p>Między innymi imiona i nazwiska, numery PESEL, adresy i numery rachunków. Wszystko, czego nie wykryje, możesz zaznaczyć ręcznie.</p>
+      </details>
+      <details>
+        <summary>Z jakimi narzędziami AI to działa?</summary>
+        <p>Z każdym, do którego można wkleić tekst. Alberton nie integruje się z żadnym czatem, tylko przygotowuje bezpieczną wersję dokumentu.</p>
+      </details>
+      <details>
+        <summary>W jakich językach działa?</summary>
+        <p>Obsługuje dokumenty po polsku i angielsku.</p>
+      </details>
+    </div>
+  </section>
+
+  <section class="cta" aria-labelledby="cta-title">
+    <div class="wrap">
+      <div class="cta-copy">
+        <h2 id="cta-title" class="h2">Sprawdź Albertona na własnej umowie</h2>
+        <p>Pobierz wersję próbną i zanonimizuj pierwszy dokument w kilka minut.</p>
+      </div>
+      <a class="btn btn-primary" href="#">Pobierz wersję próbną</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <span class="footer-logo">Alberton</span>
+    <nav class="footer-nav" aria-label="Stopka">
+      <a class="nav-link" href="#">Polityka prywatności</a>
+      <a class="nav-link" href="#">Regulamin</a>
+      <a class="nav-link" href="#">Kontakt</a>
+    </nav>
+    <span>© <span data-year>2026</span> Alberton</span>
+  </div>
+</footer>
+
+<script src="assets/main.js" defer></script>
+</body>
+</html>
