@@ -5,6 +5,10 @@ Strona internetowa aplikacji Alberton. Statyczny HTML/CSS/JS, bez kroku budowani
 ## Struktura
 
 - `index.html` — strona główna
+- `dlaczego-my/` — zakładka „Dlaczego my?”: bezpieczeństwo i dokumentacja
+- `prezentacja/` — umawianie bezpłatnej, 20-minutowej prezentacji
+- `poradnik/` — wpisy pod SEO; `poradnik/szablon-wpisu/` to wzór nowego wpisu (noindex, poza mapą strony)
+- `narzedzia/generuj.py` — opcjonalny skrypt, który odtwarza wszystkie strony ze wspólnym nagłówkiem, paskiem FAQ i stopką; zmiany w menu lub stopce rób w nim i uruchom `python3 narzedzia/generuj.py .`
 - `404.html` — strona błędu
 - `assets/styles.css` — style (paleta, typografia, układ)
 - `assets/main.js` — przełącznik przykładu anonimizacji i rok w stopce
@@ -13,6 +17,9 @@ Strona internetowa aplikacji Alberton. Statyczny HTML/CSS/JS, bez kroku budowani
 
 ## Zasady projektu
 
+- Logo (znak i nazwa) bez zmian: nawiasy #0F4C81, pasek #38B2AC, na ciemnym tle nawiasy białe.
+- Teksty wyśrodkowane (nagłówki, wstępy), tekst ciągły justowany; w wąskich kolumnach (karty, kroki) do lewej.
+- `[…]` w ramce (klasa `.ph`) oznacza treść do uzupełnienia przed publikacją.
 - Idea marki: „znacznik zamiast danych”.
 - Paleta: Atrament #13233F (tekst, ciemne sekcje), Papier #F7F5F0 (tło), Znacznik #2FB39A (tylko grafika), Znacznik ciemny #11766A (przyciski, linki), Sygnał #E9A23B (tylko „do sprawdzenia”), Grafit #4A5568 (tekst drugorzędny).
 - Kontrast tekstu min. 4.5:1 (WCAG AA).

@@ -199,3 +199,97 @@ a:hover { color: var(--mark-darker); }
   .doc-body { padding: 20px 18px 18px; }
   .strip ul { justify-content: flex-start; }
 }
+
+/* ===== Wersja 3: podstrony, wyśrodkowanie, justowanie ===== */
+/* Logo: znak bez zmian (geometria i kolory z wersji 1) */
+.logo, .logo:hover { color: #0F4C81; }
+.logo span { color: #0F4C81; }
+
+/* Wyśrodkowane nagłówki i wstępy, justowany tekst ciągły */
+.center { text-align: center; }
+.section-head { margin-left: auto; margin-right: auto; text-align: center; align-items: center; }
+.section-head p { max-width: 60ch; }
+.justify, .prose p, .rule-copy p, .law-cols p, .security-copy p, .faq details p { text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
+.hero-copy { text-align: center; align-items: center; }
+.hero-copy .lead { text-align: center; }
+.hero-copy .actions { justify-content: center; }
+.rule-copy .h2, .security-copy .h2, .law .h2 { text-align: center; margin-left: auto; margin-right: auto; }
+.cta .wrap { flex-direction: column; text-align: center; justify-content: center; }
+.cta-copy { flex: none; align-items: center; }
+.faq { margin: 0 auto; }
+.faq .h2 { text-align: center; }
+
+/* Miejsca do uzupełnienia */
+.ph { font-family: var(--mono); font-size: 0.85em; font-weight: 600; color: var(--graphite); background: var(--chip); border: 1px dashed #B9B2A2; border-radius: 6px; padding: 1px 6px; }
+
+/* Nawigacja */
+.main-nav .nav-link[aria-current="page"] { text-decoration: underline; text-decoration-color: var(--mark); text-decoration-thickness: 3px; text-underline-offset: 7px; }
+.nav-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+/* Karty i siatki */
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.card { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 12px; }
+.card h3 { font-size: 1.2rem; line-height: 1.3; }
+.card .meta { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--mark-dark); letter-spacing: 0.04em; text-transform: uppercase; }
+.card .btn { margin-top: auto; }
+.card-featured { border: 2px solid var(--mark-dark); }
+.price { font-family: var(--head); font-weight: 800; font-size: 2rem; line-height: 1.2; }
+.price small { font-family: "Inter", sans-serif; font-size: 15px; font-weight: 600; color: var(--graphite); }
+.stat { font-family: var(--head); font-weight: 800; font-size: 2.2rem; line-height: 1.1; }
+.stat-label { font-size: 15px; color: var(--graphite); }
+.band-white { background: var(--white); }
+.video-ph { margin-top: 32px; background: var(--white); border: 1px dashed #B9B2A2; border-radius: 16px; min-height: 280px; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; color: var(--graphite); }
+
+/* Dokumentacja (Dlaczego my?) */
+.docs { list-style: none; margin: 0; padding: 0; border-bottom: 1px solid var(--line); }
+.docs li { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 24px; padding: 18px 0; border-top: 1px solid var(--line); }
+.docs .doc-what { flex: 1 1 360px; display: flex; flex-direction: column; gap: 4px; }
+.docs .doc-what strong { font-weight: 600; }
+.docs .doc-what span { color: var(--graphite); font-size: 15px; }
+.docs .doc-for { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--mark-darker); background: var(--mark-tint); border-radius: 6px; padding: 3px 9px; white-space: nowrap; }
+
+/* Podstrony */
+.page-head { padding-top: 80px; padding-bottom: 56px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 18px; }
+.page-head h1 { font-size: clamp(2.2rem, 4.5vw, 3rem); line-height: 1.08; letter-spacing: -0.025em; max-width: 20ch; }
+.page-head .lead { text-align: center; max-width: 40em; }
+.prose { max-width: 720px; margin: 0 auto; display: flex; flex-direction: column; gap: 18px; }
+.prose h2 { font-size: 1.6rem; line-height: 1.2; margin-top: 24px; text-align: center; }
+.breadcrumb { font-size: 14px; color: var(--graphite); }
+.breadcrumb a { color: var(--graphite); }
+
+/* Formularz prezentacji */
+.form { background: var(--white); border: 1px solid var(--line); border-radius: 16px; padding: 28px; display: flex; flex-direction: column; gap: 16px; }
+.field { display: flex; flex-direction: column; gap: 6px; }
+.field label { font-weight: 600; font-size: 15px; }
+.field input, .field select, .field textarea { font: 400 16px/1.4 "Inter", system-ui, sans-serif; color: var(--ink); background: var(--paper); border: 1.5px solid #B9B2A2; border-radius: 8px; padding: 12px 14px; min-height: 48px; }
+.field input:focus, .field select:focus, .field textarea:focus { outline: 2px solid var(--mark-dark); outline-offset: 1px; border-color: var(--mark-dark); }
+.form .note { font-size: 14px; color: var(--graphite); text-align: justify; hyphens: auto; }
+.agenda { list-style: none; margin: 0; padding: 0; counter-reset: a; }
+.agenda li { display: flex; gap: 16px; padding: 16px 0; border-top: 1px solid var(--line); }
+.agenda li:last-child { border-bottom: 1px solid var(--line); }
+.agenda .mono { color: var(--mark-dark); flex: none; width: 4.5em; }
+
+/* Pasek najczęstszych pytań nad stopką */
+.faq-bar { background: var(--white); border-top: 1px solid var(--line); }
+.faq-bar .wrap { padding-top: 28px; padding-bottom: 28px; display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 10px 14px; text-align: center; }
+.faq-bar .label { font-family: var(--mono); font-size: 13px; font-weight: 600; color: var(--graphite); letter-spacing: 0.04em; text-transform: uppercase; margin-right: 6px; }
+.faq-bar a { display: inline-flex; align-items: center; min-height: 40px; padding: 0 14px; border: 1px solid var(--line); border-radius: 999px; color: var(--ink); text-decoration: none; font-size: 14px; font-weight: 600; background: var(--paper); }
+.faq-bar a:hover { border-color: var(--mark-dark); color: var(--mark-darker); }
+
+/* Stopka z danymi spółki */
+.site-footer .footer-cols { align-items: flex-start; }
+.footer-col { display: flex; flex-direction: column; gap: 8px; }
+.footer-col .ph { color: var(--on-ink); background: transparent; border-color: var(--ink-line); }
+.footer-company { max-width: 420px; line-height: 1.7; }
+
+@media (min-width: 641px) and (max-width: 1024px) {
+  .hero { gap: 40px; }
+  .hero-copy, .hero-demo { flex-basis: 100%; }
+  .doc { max-width: 680px; margin: 0 auto; }
+}
+@media (max-width: 640px) {
+  .page-head { padding-top: 48px; padding-bottom: 40px; }
+  .card, .form { padding: 22px; }
+}
+.split > .form { flex: 1 1 400px; min-width: 0; }
+.card p, .steps p { text-align: left; }  /* wąskie kolumny: justowanie robi „dziury” między słowami */
