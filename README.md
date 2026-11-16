@@ -36,16 +36,18 @@ i otwórz http://localhost:8000
 
 ## Wersje i przywracanie
 
-- Wersja 2 (od 16.11.2026): nowa identyfikacja, gałąź `main`.
-- Wersja 1 (8.11.2026, granat i turkus): zamrożona na gałęzi `archiwum/wersja-1`. Nie zmieniaj tej gałęzi.
+- Wersja 3 (od 16.11.2026): zakładki Dlaczego my?, Prezentacja, Poradnik; zmiany wg audytu. Gałąź `main`.
+- Wersja 2 (16.11.2026, nowa identyfikacja, jedna strona): zamrożona na gałęzi `archiwum/wersja-2`.
+- Wersja 1 (8.11.2026, granat i turkus): zamrożona na gałęzi `archiwum/wersja-1`.
 
-Żeby przywrócić wersję 1 na stronie, bez kasowania historii:
+Gałęzi `archiwum/*` nie zmieniaj. Żeby przywrócić wybraną wersję na stronie, bez kasowania historii (przykład dla wersji 2):
 
 ```
 git checkout main
-git checkout archiwum/wersja-1 -- .
-git commit -m "Przywróć wersję 1 strony"
+git rm -r -q .
+git checkout archiwum/wersja-2 -- .
+git commit -m "Przywróć wersję 2 strony"
 git push
 ```
 
-Wersja 2 zostaje wtedy w historii `main`, więc można do niej wrócić tak samo (np. z commita „Strona w nowej identyfikacji”). Nowe pliki fontów zostaną w repozytorium, ale wersja 1 ich nie używa.
+`git rm` usuwa najpierw pliki, których starsza wersja nie miała (np. podstrony wersji 3), żeby nie zostały na stronie. Nowsza wersja zostaje w historii `main` i można do niej wrócić tak samo.
