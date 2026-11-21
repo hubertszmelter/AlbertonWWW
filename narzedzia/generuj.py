@@ -3,11 +3,9 @@ import sys, pathlib, re
 
 REPO = pathlib.Path(sys.argv[1])
 
-# Znak bez zmian względem wersji 1 (geometria i kolory).
-LOGO = ('<svg width="28" height="28" viewBox="0 0 28 28" fill="none" aria-hidden="true">'
-        '<path d="M8 4H4V24H8" stroke="{c}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>'
-        '<path d="M20 4H24V24H20" stroke="{c}" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>'
-        '<rect x="9" y="12" width="10" height="4" rx="1" fill="#38B2AC"/></svg>')
+# Znak z programu Alberton: szare „A” i niebieska poprzeczka.
+LOGO = ('<svg width="30" height="30" viewBox="3 2 38 38" fill="none" aria-hidden="true">'
+        '<path d="M4.75 37L16.25 5H24.75L30.75 22.25H24.25L20.5 12L10.75 37Z" fill="{g}"/><path d="M27.25 30H33.75L36 37H29.5Z" fill="{g}"/><rect x="18" y="24" width="22" height="4.75" rx="0.6" fill="#5AB0F5"/></svg>')
 
 NAV = [("Jak działa", "/#jak-dziala", "home"), ("Dlaczego my?", "/dlaczego-my/", "why"),
        ("Cennik", "/#cennik", "home"), ("Poradnik", "/poradnik/", "blog"), ("FAQ", "/#faq", "home")]
@@ -42,8 +40,8 @@ def head(title, desc, path, extra="", noindex=False):
 <meta property="og:image:alt" content="Alberton — wklejaj umowy do AI bez danych klientów">
 <meta name="twitter:card" content="summary_large_image">
 
-<link rel="preload" href="/assets/fonts/manrope-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/assets/styles.css">
 {extra}</head>
 <body>
@@ -58,7 +56,7 @@ def header(active):
 <header class="site-header">
   <div class="wrap">
     <a class="logo" href="/" aria-label="Alberton — strona główna">
-      {LOGO.format(c="#0F4C81")}
+      {LOGO.format(g="#B2B9C2")}
       <span>Alberton</span>
     </a>
     <nav class="main-nav" aria-label="Główna nawigacja">
@@ -90,7 +88,7 @@ FOOTER = f'''
 <footer class="site-footer">
   <div class="wrap footer-cols">
     <div class="footer-col footer-company">
-      <span class="footer-logo">{LOGO.format(c="#F7F5F0")}Alberton</span>
+      <span class="footer-logo">{LOGO.format(g="#B2B9C2")}Alberton</span>
       <span>{ph("Nazwa spółki")} sp. z o.o., {ph("adres siedziby")}<br>
       Sąd rejestrowy: {ph("nazwa sądu")}, KRS {ph("numer")}<br>
       NIP {ph("numer")}, REGON {ph("numer")}, kapitał zakładowy {ph("kwota")}&nbsp;zł</span>
