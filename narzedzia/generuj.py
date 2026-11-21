@@ -5,7 +5,7 @@ REPO = pathlib.Path(sys.argv[1])
 
 # Znak z programu Alberton: szare „A” i niebieska poprzeczka.
 LOGO = ('<svg width="30" height="30" viewBox="3 2 38 38" fill="none" aria-hidden="true">'
-        '<path d="M4.75 37L16.25 5H24.75L30.75 22.25H24.25L20.5 12L10.75 37Z" fill="{g}"/><path d="M27.25 30H33.75L36 37H29.5Z" fill="{g}"/><rect x="18" y="24" width="22" height="4.75" rx="0.6" fill="#5AB0F5"/></svg>')
+        '<path d="M4.75 37L16.25 5H24.75L30.75 22.25H24.25L20.5 12L10.75 37Z" fill="{g}"/><path d="M27.25 30H33.75L36 37H29.5Z" fill="{g}"/><rect x="18" y="24" width="22" height="4.75" fill="#5AB0F5"/></svg>')
 
 NAV = [("Jak działa", "/#jak-dziala", "home"), ("Dlaczego my?", "/dlaczego-my/", "why"),
        ("Cennik", "/#cennik", "home"), ("Poradnik", "/poradnik/", "blog"), ("FAQ", "/#faq", "home")]
@@ -63,8 +63,7 @@ def header(active):
 {links}
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-outline btn-sm" href="/prezentacja/">Umów prezentację</a>
-      <a class="btn btn-primary btn-sm" href="#">Pobierz wersję próbną</a>
+      <a class="btn btn-primary btn-sm" href="/prezentacja/">Umów prezentację</a>
     </div>
   </div>
 </header>
@@ -145,10 +144,9 @@ home = f'''
       <h1 id="hero-title">Wklejaj umowy do AI bez danych klientów</h1>
       <p class="lead">Alberton zamienia nazwiska, numery PESEL, adresy i numery rachunków na znaczniki, zanim tekst opuści Twój komputer. Działa offline, z dokumentami po polsku i angielsku.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="#">Pobierz wersję próbną</a>
-        <a class="btn btn-outline" href="/prezentacja/">Umów bezpłatną prezentację (20 min)</a>
+        <a class="btn btn-primary" href="/prezentacja/">Umów bezpłatną prezentację (20 min)</a>
       </div>
-      <p class="hero-note">{ph("LICZBA")} dni za darmo · Windows i macOS · bez karty płatniczej</p>
+      <p class="hero-note">Windows i macOS</p>
     </div>
 
     <div class="hero-demo">
@@ -252,11 +250,11 @@ home = f'''
     <div class="wrap section">
       <div class="section-head">
         <h2 id="price-title" class="h2">Cennik</h2>
-        <p class="muted">Ceny netto. Faktura VAT. {ph("okres rozliczenia i długość okresu próbnego")}</p>
+        <p class="muted">Ceny netto. Faktura VAT. {ph("okres rozliczenia")}</p>
       </div>
       <div class="grid">
-        <div class="card"><h3>Stanowisko</h3><div class="price">{ph("CENA")} zł <small>netto / mies.</small></div><p>Dla prawnika, który pracuje sam.</p><a class="btn btn-outline btn-sm" href="#">Wypróbuj</a></div>
-        <div class="card card-featured"><div class="meta">Dla zespołów</div><h3>Zespół</h3><div class="price">{ph("CENA")} zł <small>netto / stanowisko</small></div><p>Wspólne reguły zakrywania i centralne licencje. {ph("funkcje do potwierdzenia")}</p><a class="btn btn-primary btn-sm" href="#">Wypróbuj w zespole</a></div>
+        <div class="card"><h3>Stanowisko</h3><div class="price">{ph("CENA")} zł <small>netto / mies.</small></div><p>Dla prawnika, który pracuje sam.</p><a class="btn btn-outline btn-sm" href="/prezentacja/">Umów prezentację</a></div>
+        <div class="card card-featured"><div class="meta">Dla zespołów</div><h3>Zespół</h3><div class="price">{ph("CENA")} zł <small>netto / stanowisko</small></div><p>Wspólne reguły zakrywania i centralne licencje. {ph("funkcje do potwierdzenia")}</p><a class="btn btn-primary btn-sm" href="/prezentacja/">Umów prezentację</a></div>
         <div class="card"><h3>Kancelaria lub firma</h3><div class="price">Wycena</div><p>Wdrożenie przez dział IT, faktura roczna, umowa licencyjna.</p><a class="btn btn-outline btn-sm" href="/prezentacja/">Umów prezentację</a></div>
       </div>
     </div>
@@ -283,7 +281,7 @@ home = f'''
         <details id="q-wymagania"><summary>Jakie są wymagania systemowe i czy potrzebuję administratora?</summary>
           <p>Alberton działa na Windows i macOS. {ph("Wersje systemu, uprawnienia potrzebne do instalacji")}</p></details>
         <details id="q-cena"><summary>Ile kosztuje i jak wygląda faktura?</summary>
-          <p>Ceny podajemy netto, wystawiamy fakturę VAT. {ph("Ceny planów, okres próbny, płatność miesięczna lub roczna")} Szczegóły w <a href="#cennik">cenniku</a>.</p></details>
+          <p>Ceny podajemy netto, wystawiamy fakturę VAT. {ph("Ceny planów, płatność miesięczna lub roczna")} Szczegóły w <a href="#cennik">cenniku</a>.</p></details>
       </div>
     </div>
   </section>
@@ -292,11 +290,10 @@ home = f'''
     <div class="wrap">
       <div class="cta-copy">
         <h2 id="cta-title" class="h2">Sprawdź Albertona na własnej umowie</h2>
-        <p>Pobierz wersję próbną albo umów bezpłatną, 20-minutową prezentację.</p>
+        <p>Umów bezpłatną, 20-minutową prezentację.</p>
       </div>
       <div class="actions">
-        <a class="btn btn-primary" href="#">Pobierz wersję próbną</a>
-        <a class="btn btn-outline" href="/prezentacja/">Umów prezentację</a>
+        <a class="btn btn-primary" href="/prezentacja/">Umów bezpłatną prezentację</a>
       </div>
     </div>
   </section>
@@ -491,7 +488,7 @@ tmpl = f'''
       <p>{ph("Treść sekcji")}</p>
       <h2>Najważniejsze w skrócie</h2>
       <p>{ph("3–5 zdań podsumowania")}</p>
-      <div class="card center"><h3>Sprawdź Albertona na własnej umowie</h3><p class="center">Pobierz wersję próbną albo umów bezpłatną prezentację.</p><p><a class="btn btn-primary btn-sm" href="/prezentacja/">Umów prezentację</a></p></div>
+      <div class="card center"><h3>Sprawdź Albertona na własnej umowie</h3><p class="center">Umów bezpłatną prezentację.</p><p><a class="btn btn-primary btn-sm" href="/prezentacja/">Umów prezentację</a></p></div>
     </div>
   </article>
 '''
