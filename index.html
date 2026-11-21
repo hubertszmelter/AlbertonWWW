@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Alberton — anonimizacja umów przed wklejeniem do AI</title>
 <meta name="description" content="Alberton zamienia nazwiska, numery PESEL, adresy i numery rachunków na znaczniki, zanim tekst opuści Twój komputer. Działa offline, dla dokumentów po polsku i angielsku.">
-<meta name="theme-color" content="#13233F">
+<meta name="theme-color" content="#03003D">
 <link rel="canonical" href="https://alberton.pl/">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
@@ -48,14 +48,14 @@
       <span>Alberton</span>
     </a>
     <nav class="main-nav" aria-label="Główna nawigacja">
-      <a class="nav-link" href="/#jak-dziala">Jak działa</a>
+      <a class="nav-link" href="#jak-dziala">Jak działa</a>
       <a class="nav-link" href="/dlaczego-my/">Dlaczego my?</a>
-      <a class="nav-link" href="/#cennik">Cennik</a>
+      <a class="nav-link" href="#cennik">Cennik</a>
       <a class="nav-link" href="/poradnik/">Poradnik</a>
-      <a class="nav-link" href="/#faq">FAQ</a>
+      <a class="nav-link" href="#faq">FAQ</a>
     </nav>
     <div class="nav-actions">
-      <a class="btn btn-primary btn-sm" href="/prezentacja/">Umów prezentację</a>
+      <a class="btn btn-primary btn-sm btn-green" href="/prezentacja/">Umów bezpłatną konsultację</a>
     </div>
   </div>
 </header>
@@ -63,75 +63,92 @@
 <main id="tresc">
 
   <section class="hero-bg" aria-labelledby="hero-title">
-  <div class="wrap hero">
+  <div class="hero-slider" role="region" aria-roledescription="karuzela" aria-label="Najważniejsze informacje o Albertonie">
+  <button type="button" class="hs-arrow hs-prev" aria-label="Poprzedni slajd">&#8249;</button>
+  <button type="button" class="hs-arrow hs-next" aria-label="Następny slajd">&#8250;</button>
+  <div class="hs-track">
+  <div class="wrap hero hs-slide is-active" role="group" aria-roledescription="slajd" aria-label="1 z 2">
     <div class="hero-copy">
-      <p class="eyebrow">Sprawdzone rozwiązanie dla kancelarii i działów prawnych</p>
-      <h1 id="hero-title">Wklejaj umowy do AI bez danych klientów</h1>
+      <h1 id="hero-title">Wklejaj umowy do AI <span class="hl">bez danych klientów</span></h1>
       <p class="lead">Alberton zamienia nazwiska, numery PESEL, adresy i numery rachunków na znaczniki, zanim tekst opuści Twój komputer. Działa offline, z dokumentami po polsku i angielsku.</p>
       <div class="actions">
-        <a class="btn btn-primary" href="/prezentacja/">Umów bezpłatną prezentację (20 min)</a>
+        <a class="btn btn-primary btn-green" href="/prezentacja/">Umów bezpłatną konsultację</a>
+        <a class="hero-link" href="#jak-dziala">Zobacz, jak to działa <span aria-hidden="true">→</span></a>
       </div>
     </div>
 
     <div class="hero-demo">
-      <img class="hero-shot" src="/assets/aplikacja.webp" width="2000" height="1231" alt="Okno aplikacji Alberton z zanonimizowaną umową o roboty budowlane: dane w tekście zastąpione kolorowymi znacznikami, takimi jak [FIRMA_1], [ADRES_1] i [OSOBA_1]">
+      <div class="shot-wrap">
+        <img class="hero-shot" src="/assets/aplikacja.webp" width="2000" height="1231" alt="Okno aplikacji Alberton z zanonimizowaną umową o roboty budowlane: dane w tekście zastąpione kolorowymi znacznikami, takimi jak [FIRMA_1], [ADRES_1] i [OSOBA_1]">
+        <div class="shot-chip" aria-hidden="true"><span class="chip-ico"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><strong>955 fragmentów</strong> ukrytych przed wysłaniem</span></div>
+      </div>
     </div>
+  </div>
+  <div class="wrap hero hs-slide" role="group" aria-roledescription="slajd" aria-label="2 z 2" aria-hidden="true">
+    <div class="hero-copy">
+      <h2 class="hero-h">Dokumenty nie opuszczają Twojego komputera</h2>
+      <p class="lead">Anonimizacja odbywa się w całości na Twoim urządzeniu. Alberton nie potrzebuje internetu, żeby działać, i nie przesyła plików na żadne serwery.</p>
+      <div class="actions"><a class="btn btn-primary btn-green" href="/prezentacja/">Umów bezpłatną konsultację</a></div>
+    </div>
+    <div class="hero-demo">
+      <div class="panel">
+        <p class="panel-title">Na Twoim komputerze</p>
+        <ul class="found">
+          <li><span>Działanie bez internetu</span><span class="status status-done">Tak</span></li>
+          <li><span>Wysyłanie dokumentów na serwery</span><span class="status status-done">Brak</span></li>
+          <li><span>Tekst do AI wklejasz sam</span><span class="status status-done">Widzisz, co wysyłasz</span></li>
+          <li><span>Dokumentacja dla działu IT</span><span class="status status-check">Dostępna</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="hs-dots" role="tablist" aria-label="Wybór slajdu"></div>
   </div>
   </section>
 
-  <section class="strip" aria-label="W skrócie">
-    <ul class="wrap">
-      <li>Działa w pełni offline</li>
-      <li>Dokumenty nie trafiają na żadne serwery</li>
-      <li>Windows i macOS</li>
-      <li>Polski i angielski</li>
-    </ul>
-  </section>
-
-  <section id="jak-dziala" class="wrap section" aria-labelledby="how-title">
-    <div class="section-head">
-      <h2 id="how-title" class="h2">Trzy kroki, zanim tekst trafi do czatu</h2>
-      <p class="muted">Alberton nie łączy się z żadnym czatem AI. Przygotowuje tekst, a Ty decydujesz, gdzie go wkleić.</p>
-    </div>
-    <ol class="steps">
-      <li>
-        <span class="num" aria-hidden="true">[01]</span>
-        <h3>Otwierasz dokument</h3>
-        <p>Wklejasz tekst albo otwierasz plik umowy, pisma lub notatki (<span class="ph">[FORMATY: .docx, .pdf…]</span>). Alberton obsługuje dokumenty po polsku i angielsku.</p>
-      </li>
-      <li>
-        <span class="num" aria-hidden="true">[02]</span>
-        <h3>Sprawdzasz znaczniki</h3>
-        <p>Dane osobowe i identyfikatory zmieniają się w znaczniki, takie jak <span class="tag">[OSOBA_1]</span> czy <span class="tag">[PESEL_1]</span>. Wątpliwe fragmenty są oznaczone do sprawdzenia, resztę zakryjesz ręcznie.</p>
-      </li>
-      <li>
-        <span class="num" aria-hidden="true">[03]</span>
-        <h3>Kopiujesz tekst do AI</h3>
-        <p>Wklejasz zanonimizowany tekst do narzędzia, z którego korzysta Twoja kancelaria. Analiza umowy działa tak samo, tylko bez danych klientów.</p>
-      </li>
-    </ol>
-    <div class="video-ph"><span class="ph">[Nagranie ekranu 30–45 s: otwarcie umowy, przegląd znaczników, kopiowanie]</span></div>
-  </section>
-
-  <section class="band" aria-labelledby="rule-title">
-    <div class="wrap section split">
-      <div class="rule-copy">
-        <h2 id="rule-title" class="h2">Lepiej zakryć za dużo niż za mało</h2>
-        <p class="measure muted">Kiedy Alberton nie jest pewien, czy fragment to dana osobowa, zakrywa go i oznacza do sprawdzenia. Odznaczenie zbędnego znacznika zajmuje chwilę. Przeoczony numer PESEL w czacie AI to już problem.</p>
-        <p class="measure muted">Masz też ręczne narzędzie do zaznaczania: nazwę spółki, sygnaturę akt czy szczegół sprawy zakryjesz sam, zanim skopiujesz tekst.</p>
-      </div>
-      <div class="panel">
-        <p class="panel-title">Wykryte w dokumencie</p>
-        <ul class="found">
-          <li><span>Jan Kowalski <span class="kind">· osoba</span></span><span class="status status-done">Zakryte</span></li>
-          <li><span>44051401359 <span class="kind">· PESEL</span></span><span class="status status-done">Zakryte</span></li>
-          <li><span>ul. Lipowa 7/12 <span class="kind">· adres</span></span><span class="status status-done">Zakryte</span></li>
-          <li><span>Wynajmujący <span class="kind">· możliwa osoba</span></span><span class="status status-check">Do sprawdzenia</span></li>
-        </ul>
-        <button type="button" class="btn btn-outline btn-sm">Zaznacz fragment ręcznie</button>
-      </div>
+  <section class="promo-bar" aria-label="Dla kogo jest Alberton">
+    <div class="wrap promo-inner for-inner">
+      <p class="for-label">Nowoczesne rozwiązanie dla:</p>
+      <div class="for-slider"><button type="button" class="for-arrow for-prev" aria-label="Poprzednie" disabled>&#8249;</button><ul class="for-list"><li><span class="for-ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true"><path d="M24 8v30" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 14h28" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="24" cy="10" r="2.2" fill="#1F5F99"/><path d="M14 14 8 27h12z" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M34 14l-6 13h12z" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M7 27a7 3.5 0 0 0 14 0z" fill="none" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M27 27a7 3.5 0 0 0 14 0z" fill="none" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M16 40h16" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M19 38h10" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg></span><span>Kancelarii adwokackich</span></li><li><span class="for-ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true"><path d="M12 6h17l7 7v29H12z" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M29 6v7h7" fill="none" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><text x="24" y="34" text-anchor="middle" font-family="IBM Plex Sans, sans-serif" font-size="17" font-weight="600" fill="#1F5F99">§</text></svg></span><span>Kancelarii radców prawnych</span></li><li><span class="for-ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true"><rect x="7" y="15" width="34" height="24" fill="none" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M18 15v-4h12v4" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M7 25h34" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="21" y="22.5" width="6" height="5" fill="#1F5F99"/></svg></span><span>Działów prawnych firm</span></li><li><span class="for-ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true"><path d="M6 41h36" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M10 41V20L24 9l14 11v21" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="20" y="29" width="8" height="12" fill="none" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg></span><span>Zarządców nieruchomości</span></li><li><span class="for-ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true"><circle cx="24" cy="10" r="4.5" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M21 14.5h6l1.5 9h-9z" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="11" y="23.5" width="26" height="7" fill="none" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M9 34.5h30" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M15 40h18" stroke="#1F5F99" stroke-width="2.5" stroke-linecap="round"/></svg></span><span>Notariuszy</span></li><li><span class="for-ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true"><rect x="12" y="6" width="24" height="36" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><rect x="16" y="10" width="16" height="7" fill="none" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M26 13.5h3" stroke="#1F5F99" stroke-width="2" stroke-linecap="round"/><circle cx="18" cy="23" r="1.6" fill="#1F5F99"/><circle cx="24" cy="23" r="1.6" fill="#1F5F99"/><circle cx="18" cy="29" r="1.6" fill="#1F5F99"/><circle cx="24" cy="29" r="1.6" fill="#1F5F99"/><circle cx="18" cy="35" r="1.6" fill="#1F5F99"/><circle cx="24" cy="35" r="1.6" fill="#1F5F99"/><rect x="28.5" y="21.5" width="3" height="15" fill="#1F5F99"/></svg></span><span>Biur rachunkowych</span></li><li><span class="for-ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true"><rect x="10" y="6" width="28" height="36" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M17 33l14-14" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="18.5" cy="20.5" r="3" fill="none" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="29.5" cy="31.5" r="3" fill="#1F5F99"/></svg></span><span>Doradców podatkowych</span></li><li><span class="for-ico"><svg viewBox="0 0 48 48" width="48" height="48" fill="none" aria-hidden="true"><circle cx="18" cy="16" r="5" fill="none" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M8 38c0-6 4.5-10 10-10s10 4 10 10" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="32" cy="18" r="4" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><path d="M30 28.5c5 0 10 3 10 9.5" stroke="#1F5F99" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/><circle cx="32" cy="18" r="1.6" fill="#1F5F99"/></svg></span><span>Działów kadr i HR</span></li></ul><button type="button" class="for-arrow for-next" aria-label="Więcej grup">&#8250;</button></div>
     </div>
   </section>
+
+  <section id="bezpieczenstwo" class="security" aria-labelledby="sec-title">
+    <div class="wrap section sec-wrap">
+      <div class="sec-top">
+        <div class="sec-head">
+                    <h2 id="sec-title" class="h2">Bezpieczeństwo i zgodność z <span class="sec-accent">RODO</span></h2>
+        </div>
+        <div class="sec-body">
+          <p class="sec-lead">Zasady działania Albertona budowaliśmy bezpośrednio na regulacjach RODO. Ochrona danych jest wbudowana w program od początku: dokumenty są przetwarzane wyłącznie na Twoim urządzeniu, bez internetu i bez zewnętrznych serwerów.</p>
+          <p class="sec-lead">Do narzędzia AI trafia tylko tekst, w którym dane osobowe zastąpiono znacznikami, czyli wyłącznie to, co niezbędne do analizy. Jako dostawca nie mamy dostępu do treści Twoich dokumentów.</p>
+        </div>
+      </div>
+      <ul class="sec-tiles">
+        <li><span class="sec-ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><path d="M2 9a15 15 0 0 1 20 0M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0"/><path d="M12 19.5h.01"/><path d="M3 3l18 18"/></svg></span><strong>W pełni offline</strong><span>Program nie potrzebuje internetu do pracy.</span></li>
+        <li><span class="sec-ico"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="square" stroke-linejoin="miter" aria-hidden="true"><rect x="3" y="4" width="18" height="6"/><rect x="3" y="14" width="18" height="6"/><path d="M7 7h.01M7 17h.01"/><path d="M3 3l18 18"/></svg></span><strong>Bez zewnętrznego serwera</strong><span>Dokumenty nie są wysyłane na żadne serwery.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="korzysci" class="how-sec" aria-labelledby="ben-title">
+    <div class="wrap section">
+      <div class="section-head">
+        <h2 id="ben-title" class="h2">Korzyści dla Twojej firmy</h2>
+        <p>Co zyskujesz, korzystając z Albertona na co dzień.</p>
+      </div>
+      <ul class="ben-grid">
+        <li class="how-card"><span class="how-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg></span><h3>Szybsza praca z umowami</h3><p>Analizujesz umowy w narzędziach AI bez ręcznego wycinania danych klientów z każdego dokumentu.</p></li>
+        <li class="how-card"><span class="how-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></span><h3>Tajemnica zawodowa pod kontrolą</h3><p>Nazwiska, numery PESEL i dane spraw zostają na Twoim komputerze, zanim tekst trafi do czatu.</p></li>
+        <li class="how-card"><span class="how-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16M12 4v16"/><circle cx="12" cy="12" r="8"/></svg></span><h3>Mniejsze ryzyko naruszeń</h3><p>Ograniczasz ilość danych osobowych przekazywanych do zewnętrznych narzędzi do niezbędnego minimum.</p></li>
+        <li class="how-card"><span class="how-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="12" rx="1"/><path d="M8 21h8M12 17v4"/></svg></span><h3>Bez wdrożenia IT</h3><p>Instalujesz program na komputerze i od razu pracujesz. Nie potrzebujesz serwerów ani wiedzy technicznej.</p></li>
+        <li class="how-card"><span class="how-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16v10H8l-4 4z"/><path d="M8 10h8M8 13h5"/></svg></span><h3>Działa z Twoim narzędziem AI</h3><p>Wklejasz zanonimizowany tekst do czatu, z którego już korzysta Twoja kancelaria lub firma.</p></li>
+        <li class="how-card"><span class="how-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6S2 12 2 12z"/><circle cx="12" cy="12" r="2.5"/></svg></span><h3>Pełna kontrola nad tekstem</h3><p>Przed wysłaniem widzisz każdy znacznik i możesz ręcznie zakryć to, czego program nie wykrył.</p></li>
+      </ul>
+    </div>
+  </section>
+
 
   <section id="test-jakosci" class="wrap section" aria-labelledby="test-title">
     <div class="section-head">
@@ -146,21 +163,6 @@
     <p class="center" style="margin-top:24px"><a href="#">Zobacz metodę testu →</a> <span class="ph">[link do /test-jakosci]</span></p>
   </section>
 
-  <section id="bezpieczenstwo" class="security" aria-labelledby="sec-title">
-    <div class="wrap section security-grid">
-      <div class="security-copy">
-        <h2 id="sec-title" class="h2">Dokumenty nie opuszczają Twojego komputera</h2>
-        <p>Anonimizacja odbywa się w całości na Twoim urządzeniu. Alberton nie potrzebuje internetu, żeby działać, i nie przesyła plików na żadne serwery.</p>
-        <p><a class="btn btn-primary" href="/dlaczego-my/">Bezpieczeństwo i dokumentacja</a></p>
-      </div>
-      <ul class="facts">
-        <li>Działa w pełni offline</li>
-        <li>Bez konta w chmurze i bez wysyłania dokumentów</li>
-        <li>Tekst do AI wklejasz sam, więc zawsze widzisz, co wysyłasz</li>
-        <li>Dokumentacja dla działu IT i inspektora ochrony danych</li>
-      </ul>
-    </div>
-  </section>
 
   <section id="kancelarie" class="wrap section law" aria-labelledby="law-title">
     <h2 id="law-title" class="h2">AI w kancelarii i dziale prawnym, tajemnica na miejscu</h2>
@@ -169,6 +171,30 @@
       <p>Samorządy zawodowe publikują rekomendacje dotyczące korzystania z narzędzi AI. Alberton nie zastępuje ich lektury, ale ułatwia stosowanie zasady, by nie przekazywać danych klientów zewnętrznym narzędziom. <span class="ph">[odnośnik do rekomendacji KIRP]</span></p>
       <p>Nie wymaga wiedzy technicznej ani własnych serwerów. Instalujesz program na komputerze i od razu pracujesz na swoich dokumentach.</p>
     </div>
+  </section>
+
+  <section id="jak-dziala" class="how-sec" aria-labelledby="how-title">
+    <div class="wrap section">
+    <div class="section-head">
+      <h2 id="how-title" class="h2">Trzy kroki, zanim tekst trafi do czatu</h2>
+      <p class="muted">Alberton nie łączy się z żadnym czatem AI. Przygotowuje tekst, a Ty decydujesz, gdzie go wkleić.</p>
+    </div>
+    <ol class="how-steps">
+        <li>
+          <span class="how-badge" aria-hidden="true">01</span>
+          <div class="how-card"><span class="how-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4"/><path d="M12 11v6M9 14h6"/></svg></span><h3>Otwierasz dokument</h3><p>Wklejasz tekst albo otwierasz plik umowy, pisma lub notatki (<span class="ph">[FORMATY: .docx, .pdf…]</span>). Alberton obsługuje dokumenty po polsku i angielsku.</p></div>
+        </li>
+        <li>
+          <span class="how-badge" aria-hidden="true">02</span>
+          <div class="how-card"><span class="how-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 5H4v14h3M17 5h3v14h-3"/><path d="M9 12h6"/></svg></span><h3>Sprawdzasz znaczniki</h3><p>Dane osobowe i identyfikatory zmieniają się w znaczniki, takie jak <span class="tag">[OSOBA_1]</span> czy <span class="tag">[PESEL_1]</span>. Wątpliwe fragmenty są oznaczone do sprawdzenia, resztę zakryjesz ręcznie.</p></div>
+        </li>
+        <li>
+          <span class="how-badge" aria-hidden="true">03</span>
+          <div class="how-card"><span class="how-ico"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="1"/><path d="M16 8V4H4v12h4"/><path d="M11 14h6"/></svg></span><h3>Kopiujesz tekst do AI</h3><p>Wklejasz zanonimizowany tekst do narzędzia, z którego korzysta Twoja kancelaria. Analiza umowy działa tak samo, tylko bez danych klientów.</p></div>
+        </li>
+      </ol>
+    <div class="how-video"><div class="how-screen"><span class="how-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="28" height="28"><path d="M8 5v14l11-7z" fill="currentColor"/></svg></span></div><p class="how-caption"><span class="ph">[Nagranie ekranu 30–45 s: otwarcie umowy, przegląd znaczników, kopiowanie]</span></p></div>
+  </div>
   </section>
 
   <section id="cennik" class="band" aria-labelledby="price-title">
@@ -228,12 +254,12 @@
 <section class="faq-bar" aria-label="Najczęstsze pytania">
   <div class="wrap">
     <span class="label">Najczęstsze pytania</span>
-    <a href="/#q-internet">Czy dokumenty trafiają do internetu?</a>
-    <a href="/#q-rodo">Anonimizacja czy pseudonimizacja?</a>
-    <a href="/#q-dane">Jakie dane rozpoznaje?</a>
-    <a href="/#q-cena">Ile kosztuje?</a>
-    <a href="/#q-wymagania">Wymagania systemowe</a>
-    <a href="/#faq">Wszystkie pytania →</a>
+    <a href="#q-internet">Czy dokumenty trafiają do internetu?</a>
+    <a href="#q-rodo">Anonimizacja czy pseudonimizacja?</a>
+    <a href="#q-dane">Jakie dane rozpoznaje?</a>
+    <a href="#q-cena">Ile kosztuje?</a>
+    <a href="#q-wymagania">Wymagania systemowe</a>
+    <a href="#faq">Wszystkie pytania →</a>
   </div>
 </section>
 
@@ -249,7 +275,7 @@
       <a href="/dlaczego-my/">Dlaczego my?</a>
       <a href="/prezentacja/">Umów prezentację</a>
       <a href="/poradnik/">Poradnik</a>
-      <a href="/#cennik">Cennik</a>
+      <a href="#cennik">Cennik</a>
     </nav>
     <nav class="footer-col footer-nav" aria-label="Dokumenty">
       <a href="#">Polityka prywatności</a>
@@ -265,5 +291,6 @@
 </footer>
 
 <script src="/assets/main.js" defer></script>
+<script src="/assets/slider.js" defer></script>
 </body>
 </html>
