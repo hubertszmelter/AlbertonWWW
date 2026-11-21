@@ -138,7 +138,8 @@ HOME_LD = '''<script type="application/ld+json">
 '''
 
 home = f'''
-  <section class="wrap hero" aria-labelledby="hero-title">
+  <section class="hero-bg" aria-labelledby="hero-title">
+  <div class="wrap hero">
     <div class="hero-copy">
       <p class="eyebrow">Dla kancelarii i działów prawnych</p>
       <h1 id="hero-title">Wklejaj umowy do AI bez danych klientów</h1>
@@ -152,6 +153,7 @@ home = f'''
     <div class="hero-demo">
       <img class="hero-shot" src="/assets/aplikacja.webp" width="2000" height="1231" alt="Okno aplikacji Alberton z zanonimizowaną umową o roboty budowlane: dane w tekście zastąpione kolorowymi znacznikami, takimi jak [FIRMA_1], [ADRES_1] i [OSOBA_1]">
     </div>
+  </div>
   </section>
 
   <section class="strip" aria-label="W skrócie">
