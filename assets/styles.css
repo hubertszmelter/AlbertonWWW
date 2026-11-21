@@ -275,4 +275,5 @@ a:hover { color: var(--mark-darker); }
 .split > .form { flex: 1 1 400px; min-width: 0; }
 .card p, .steps p { text-align: left; }  /* wąskie kolumny: justowanie robi „dziury” między słowami */
 .hero-shot { display: block; width: 100%; height: auto; border: 1px solid var(--line); border-radius: 0; }
-.hero-bg { background: linear-gradient(rgba(246, 244, 240, 0.84), rgba(246, 244, 240, 0.84)), url("tlo-hero.jpg") center / cover no-repeat; }
+.hero-bg { background: linear-gradient(90deg, rgba(246, 244, 240, 0.9) 0%, rgba(246, 244, 240, 0.78) 40%, rgba(246, 244, 240, 0.4) 100%), url("tlo-hero.jpg") center / cover no-repeat; }
+@media (max-width: 1024px) { .hero-bg { background: linear-gradient(rgba(246, 244, 240, 0.78), rgba(246, 244, 240, 0.78)), url("tlo-hero.jpg") center / cover no-repeat; } }
