@@ -675,3 +675,58 @@ a:hover { color: var(--mark-darker); }
 #korzysci .how-ico { background: rgba(31,95,153,.12); color: #1F5F99; }
 #korzysci .how-card h3 { color: #03003D; }
 #korzysci .how-card p { color: #2A3442; }
+.shot-chip { bottom: -30px; }
+
+/* Hero: obraz umowy wtopiony w tło, z miękkimi krawędziami */
+.hero-bg { overflow: hidden; }
+.hs-slide:first-child .hero-demo { align-self: center; }
+.shot-wrap { position: relative; margin-right: -6%; }
+.shot-wrap::before { content: ""; position: absolute; inset: -14% -10%; z-index: 0; pointer-events: none;
+  background: radial-gradient(closest-side, rgba(255,255,255,.95), rgba(255,255,255,.7) 55%, rgba(255,255,255,0)); filter: blur(6px); }
+.hero-shot { position: relative; z-index: 1; width: 100%; border: 0; border-radius: 0; box-shadow: none;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 88%, transparent 100%), linear-gradient(180deg, transparent 0, #000 12%, #000 82%, transparent 100%);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent 0, #000 9%, #000 88%, transparent 100%), linear-gradient(180deg, transparent 0, #000 12%, #000 82%, transparent 100%);
+  mask-composite: intersect; }
+@media (max-width: 1024px) { .shot-wrap { margin-right: 0; } }
+.security .sec-wrap { padding-top: 40px; padding-bottom: 56px; gap: 32px; }
+.sec-tiles li { padding-top: 22px; padding-bottom: 22px; }
+.security .sec-wrap { padding-top: 56px; padding-bottom: 71px; gap: 40px; }
+.btn-green, .site-header .btn-sm.btn-green, .hero .btn-green { background: #BDE986; border-color: #BDE986; color: #03003D; box-shadow: 0 8px 20px rgba(120,180,60,.25); }
+.btn-green:hover { background: #A9DE66; border-color: #A9DE66; color: #03003D; }
+.btn-green, .site-header .btn-sm.btn-green, .hero .btn-green { background: #256F3A; border-color: #256F3A; color: #FFFFFF; box-shadow: 0 8px 20px rgba(37,111,58,.28); }
+.btn-green:hover { background: #1D5A2E; border-color: #1D5A2E; color: #FFFFFF; }
+.btn-green, .site-header .btn-sm.btn-green, .hero .btn-green { background: #36A41D; border-color: #36A41D; color: #FFFFFF; box-shadow: 0 8px 20px rgba(54,164,29,.28); }
+.btn-green:hover { background: #2C8A17; border-color: #2C8A17; color: #FFFFFF; }
+
+/* Płynne przejście: bezpieczeństwo -> korzyści (zdjęcie) -> kolejna sekcja */
+#korzysci.how-sec { background:
+  linear-gradient(180deg, #F4F7FB 0%, rgba(244,247,251,.85) 8%, rgba(244,247,251,0) 30%),
+  linear-gradient(0deg, #F6F4F0 0%, rgba(246,244,240,0) 18%),
+  linear-gradient(180deg, rgba(255,255,255,.72) 0%, rgba(255,255,255,.5) 45%, rgba(255,255,255,.62) 100%),
+  url("tlo-korzysci.jpg") center 60% / cover no-repeat, #DCE9F5; }
+#korzysci > .wrap { padding-top: 48px; }
+#korzysci .section-head { margin-bottom: 72px; }
+#korzysci .h2::after { margin-top: 10px; }
+#korzysci .h2::after { margin-top: 4px; }
+#korzysci .h2::after { margin-top: 5px; }
+#korzysci .h2 { position: relative; top: -4px; } #korzysci .h2::after { position: relative; top: 4px; }
+.security .sec-wrap { padding-top: 77px; padding-bottom: 92px; }
+.for-ico svg { width: 55.6px; height: 55.6px; }
+.for-list li { font-size: 16.15px; }
+.for-label { font-size: clamp(1.19rem, 2.09vw, 1.52rem); }
+@media (max-width: 520px) { .for-ico svg { width: 49.4px; height: 49.4px; } }
+.for-ico svg { width: 52.65px; height: 52.65px; }
+.for-list li { font-size: 15.3px; }
+.for-label { font-size: clamp(1.125rem, 1.98vw, 1.44rem); }
+@media (max-width: 520px) { .for-ico svg { width: 46.8px; height: 46.8px; } }
+.for-ico svg [stroke] { stroke-width: 1.1; }
+.for-ico svg [stroke] { stroke-width: 1.3; }
+#korzysci.how-sec { background:
+  linear-gradient(180deg, #F4F7FB 0%, rgba(244,247,251,.85) 8%, rgba(244,247,251,0) 30%),
+  linear-gradient(180deg, rgba(255,255,255,.72) 0%, rgba(255,255,255,.5) 45%, rgba(255,255,255,.62) 100%),
+  url("tlo-korzysci.jpg") center 60% / cover no-repeat, #DCE9F5;
+  border-bottom: 1px solid #D5DCE5; }
+@media (min-width: 1025px) { .hero { padding-top: 113px; padding-bottom: 90px; } }
+.sec-body::before { content: none; } .sec-body { border-left: 0; padding-left: 0; }
+@media (min-width: 861px) { .sec-top { grid-template-columns: minmax(0,1fr) minmax(0,1fr); column-gap: 24px; } }
