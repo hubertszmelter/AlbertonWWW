@@ -154,30 +154,7 @@ home = f'''
     </div>
 
     <div class="hero-demo">
-      <div class="doc">
-        <div class="doc-bar">
-          <span class="doc-name">umowa-najmu.docx</span>
-          <div class="toggle" role="group" aria-label="Widok dokumentu">
-            <button type="button" data-view="orig" aria-pressed="false">Oryginał</button>
-            <button type="button" data-view="anon" aria-pressed="true">Po anonimizacji</button>
-          </div>
-        </div>
-        <div class="doc-body" aria-live="polite">
-          <p class="doc-title">Umowa najmu lokalu mieszkalnego</p>
-          <div data-panel="orig" hidden>
-            <p>zawarta 12 marca 2026 r. w Warszawie pomiędzy Janem Kowalskim, PESEL 44051401359, zam. ul. Lipowa 7/12, 00-001 Warszawa, zwanym dalej Wynajmującym,</p>
-            <p>a Anną Nowak, PESEL 02070803628, zam. ul. Słoneczna 3, 31-002 Kraków, zwaną dalej Najemcą.</p>
-            <p>§ 3. Czynsz w wysokości 3 200 zł Najemca wpłaca do 10. dnia miesiąca na rachunek nr PL61 1090 1014 0000 0712 1981 2874.</p>
-            <p class="doc-summary"><span>Dane w przykładzie są fikcyjne</span></p>
-          </div>
-          <div data-panel="anon">
-            <p>zawarta 12 marca 2026 r. w Warszawie pomiędzy <span class="tag">[OSOBA_1]</span>, PESEL <span class="tag">[PESEL_1]</span>, zam. <span class="tag">[ADRES_1]</span>, zwanym dalej <span class="flag" title="Do sprawdzenia">Wynajmującym</span>,</p>
-            <p>a <span class="tag">[OSOBA_2]</span>, PESEL <span class="tag">[PESEL_2]</span>, zam. <span class="tag">[ADRES_2]</span>, zwaną dalej Najemcą.</p>
-            <p>§ 3. Czynsz w wysokości 3 200 zł Najemca wpłaca do 10. dnia miesiąca na rachunek nr <span class="tag">[RACHUNEK_1]</span>.</p>
-            <p class="doc-summary"><span>7 zakrytych</span><span class="check">1 do sprawdzenia</span><span>Dane w przykładzie są fikcyjne</span></p>
-          </div>
-        </div>
-      </div>
+      <img class="hero-shot" src="/assets/aplikacja.webp" width="2000" height="1231" alt="Okno aplikacji Alberton z zanonimizowaną umową o roboty budowlane: dane w tekście zastąpione kolorowymi znacznikami, takimi jak [FIRMA_1], [ADRES_1] i [OSOBA_1]">
     </div>
   </section>
 
